@@ -2,7 +2,6 @@
 using namespace std;
 using std::string;
 
-
 class   Employee
 {
 public:
