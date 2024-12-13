@@ -7,13 +7,12 @@ bool tie = false;
 string play1 = "";
 string play2 = "";
 char token = 'x';
-void welcome(){
-    cout<<"\t\t\t\t____________________________________________\n";
-    cout<<"\t\t\t\t |                                        |\n";
-    cout<<"\t\t\t\t |     WELCOME TO MY TIC TAC TOC GAME     |\n";
-    cout<<"\t\t\t\t_|________________________________________|_\n";
-
-
+void welcome()
+{
+    cout << "\t\t\t\t____________________________________________\n";
+    cout << "\t\t\t\t |                                        |\n";
+    cout << "\t\t\t\t |     WELCOME TO MY TIC TAC TOC GAME     |\n";
+    cout << "\t\t\t\t_|________________________________________|_\n";
 }
 // the player function is responsible for im0plementing the disign of the daigram
 void players()
@@ -47,57 +46,99 @@ void function2()
         cout << play2 << " Please enter: ";
         cin >> digit;
     }
+    switch (digit)
+    {
+    case 1:
+        row = 0;
+        column = 0;
+        break;
+    case 2:
+        row = 0;
+        column = 0;
+        break;
+    case 3:
+        row = 0;
+        column = 0;
+        break;
+    case 4:
+        row = 0;
+        column = 0;
+        break;
+    case 5:
+        row = 0;
+        column = 0;
+        break;
+    case 6:
+        row = 0;
+        column = 0;
+        break;
+    case 7:
+        row = 0;
+        column = 0;
+        break;
+    case 8:
+        row = 0;
+        column = 0;
+        break;
+    case 9:
+        row = 0;
+        column = 0;
+        break;
+    default:
+        cout << "Invalid Option";
+        break;
+    }
     // these series of if statements is to specify the postion where either a 0 or and x is placed when the the player chooses either of these digits
-    if (digit == 1)
-    {
-        row = 0;
-        column = 0;
-    }
-    if (digit == 2)
-    {
-        row = 0;
-        column = 1;
-    }
-    if (digit == 3)
-    {
-        row = 0;
-        column = 2;
-    }
-    if (digit == 4)
-    {
-        row = 1;
-        column = 0;
-    }
-    if (digit == 5)
-    {
-        row = 1;
-        column = 1;
-    }
-    if (digit == 6)
-    {
-        row = 1;
-        column = 2;
-    }
-    if (digit == 7)
-    {
-        row = 2;
-        column = 0;
-    }
-    if (digit == 8)
-    {
-        row = 2;
-        column = 1;
-    }
-    if (digit == 9)
-    {
-        row = 2;
-        column = 2;
-    }
-    else if (digit < 1 || digit > 9)
-    {
-        cout << "Invalid !!!\n";
-        function2();
-    }
+    // if     (digit == 1)
+    //     {
+    //         row = 0;
+    //         column = 0;
+    //     }
+    //     if (digit == 2)
+    //     {
+    //         row = 0;
+    //         column = 1;
+    //     }
+    //     if (digit == 3)
+    //     {
+    //         row = 0;
+    //         column = 2;
+    //     }
+    //     if (digit == 4)
+    //     {
+    //         row = 1;
+    //         column = 0;
+    //     }
+    //     if (digit == 5)
+    //     {
+    //         row = 1;
+    //         column = 1;
+    //     }
+    //     if (digit == 6)
+    //     {
+    //         row = 1;
+    //         column = 2;
+    //     }
+    //     if (digit == 7)
+    //     {
+    //         row = 2;
+    //         column = 0;
+    //     }
+    //     if (digit == 8)
+    //     {
+    //         row = 2;
+    //         column = 1;
+    //     }
+    //     if (digit == 9)
+    //     {
+    //         row = 2;
+    //         column = 2;
+    //     }
+    //     else if (digit < 1 || digit > 9)
+    //     {
+    //         cout << "Invalid !!!\n";
+    // function2();
+
     // those series of if ends here where when the user does not enter the correct value it prints and error
     /*
 These series of if statements  is used to change the values of the token when one is being
@@ -110,8 +151,7 @@ contain a 0 or an x the it replaces the number at that position with 0;
 
 And when ever the space ocuppied by either x or 0 the token is set to the opposite of the value occupied by the space
 */
-
-    if (token == 'x' && space[row][column] != 'x' & space[row][column] != '0')
+    if (token == 'x' && space[row][column] != 'x' && space[row][column] != '0')
     {
         space[row][column] = 'x';
         token = '0';
@@ -125,10 +165,11 @@ And when ever the space ocuppied by either x or 0 the token is set to the opposi
     {
         cout << "There is no empty space! " << endl;
         players();
-        //function2();
+        // function2();
     }
-   // players();
 }
+// players();
+
 // Check who wins and validates the score it also checks if no body wins
 bool functionthree()
 {
@@ -161,7 +202,8 @@ bool functionthree()
 int main()
 {
     welcome();
-    cout<<endl<<endl;
+    cout << endl
+         << endl;
     cout << "Enter the name of the first player: \n";
     getline(cin, play1);
     cout << "Enter the name of the second player: \n";
