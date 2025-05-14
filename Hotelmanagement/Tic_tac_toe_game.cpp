@@ -7,7 +7,7 @@ bool tie = false;
 string play1 = "";
 string play2 = "";
 char token = 'x';
-void welcome()
+void  welcome()
 {
     cout << "\t\t\t\t____________________________________________\n";
     cout << "\t\t\t\t |                                        |\n";
@@ -42,102 +42,120 @@ void function2()
     }
     // this logic will the oppurtunity for the second player to play especially when the functionthree is implemented
     if (token == '0')
-    {
+    {        {
+            row = 0;
+            column = 0;
+        }
+        if (digit == 2)
+        {
+            row = 0;
+            column = 1;
+        }
+        if (digit == 3)
+        {
+            row = 0;
+            column = 2;
+        }
+        if (digit == 4)
+        {
         cout << play2 << " Please enter: ";
         cin >> digit;
     }
-    switch (digit)
-    {
-    case 1:
-        row = 0;
-        column = 0;
-        break;
-    case 2:
-        row = 0;
-        column = 0;
-        break;
-    case 3:
-        row = 0;
-        column = 0;
-        break;
-    case 4:
-        row = 0;
-        column = 0;
-        break;
-    case 5:
-        row = 0;
-        column = 0;
-        break;
-    case 6:
-        row = 0;
-        column = 0;
-        break;
-    case 7:
-        row = 0;
-        column = 0;
-        break;
-    case 8:
-        row = 0;
-        column = 0;
-        break;
-    case 9:
-        row = 0;
-        column = 0;
-        break;
-    default:
-        cout << "Invalid Option";
-        break;
+    /* switch (digit) 
+    // {
+    // case 1:
+    //     row = 0;
+    //     column = 0;
+    //     break;
+    // case 2:
+    //     row = 0;
+    //     column = 0;
+    //     break;
+    // case 3:
+    //     row = 0;
+    //     column = 0;
+    //     break;
+    // case 4:
+    //     row = 0;
+    //     column = 0;
+    //     break;
+    // case 5:
+    //     row = 0;
+    //     column = 0;
+    //     break;
+    // case 6:
+    //     row = 0;
+    //     column = 0;
+    //     break;
+    // case 7:
+    //     row = 0;
+    //     column = 0;
+    //     break;
+    // case 8:
+    //     row = 0;
+    //     column = 0;
+    //     break;
+    // case 9:
+    //     row = 0;
+    //     column = 0;
+    //     break;
+    // default:
+    //     cout << "Invalid Option";
+    //     break;
+    // }
+   // these series of if statements is to specify the postion where either a 0 or and x is placed when the the player chooses either of these digits
+    */
+    if(digit == 1)
+        {
+            row = 0;
+            column = 0;
+        }
+        if (digit == 2)
+        {
+            row = 0;
+            column = 1;
+        }
+        if (digit == 3)
+        {
+            row = 0;
+            column = 2;
+        }
+        if (digit == 4)
+        {
+            row = 1;
+            column = 0;
+        }
+        if (digit == 5)
+        {
+            row = 1;
+            column = 1;
+        }
+        if (digit == 6)
+        {
+            row = 1;
+            column = 2;
+        }
+        if (digit == 7)
+        {
+            row = 2;
+            column = 0;
+        }
+        if (digit == 8)
+        {
+            row = 2;
+            column = 1;
+        }
+        if (digit == 9)
+        {
+            row = 2;
+            column = 2;
+        }
+        else if (digit < 1 || digit > 9)
+        {
+            cout << "Invalid !!!\n";
+        }
     }
-    // these series of if statements is to specify the postion where either a 0 or and x is placed when the the player chooses either of these digits
-    // if     (digit == 1)
-    //     {
-    //         row = 0;
-    //         column = 0;
-    //     }
-    //     if (digit == 2)
-    //     {
-    //         row = 0;
-    //         column = 1;
-    //     }
-    //     if (digit == 3)
-    //     {
-    //         row = 0;
-    //         column = 2;
-    //     }
-    //     if (digit == 4)
-    //     {
-    //         row = 1;
-    //         column = 0;
-    //     }
-    //     if (digit == 5)
-    //     {
-    //         row = 1;
-    //         column = 1;
-    //     }
-    //     if (digit == 6)
-    //     {
-    //         row = 1;
-    //         column = 2;
-    //     }
-    //     if (digit == 7)
-    //     {
-    //         row = 2;
-    //         column = 0;
-    //     }
-    //     if (digit == 8)
-    //     {
-    //         row = 2;
-    //         column = 1;
-    //     }
-    //     if (digit == 9)
-    //     {
-    //         row = 2;
-    //         column = 2;
-    //     }
-    //     else if (digit < 1 || digit > 9)
-    //     {
-    //         cout << "Invalid !!!\n";
-    // function2();
+    function2();
 
     // those series of if ends here where when the user does not enter the correct value it prints and error
     /*

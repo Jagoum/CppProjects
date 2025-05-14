@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
 using std::string;
+
+//This is the definition of the class user
+// making the attributes of the class public means it can be access by any other function or class in the 
+// the program
+// without puting public or private , the class attribute by default are private
+
 class User
 {
 public:
